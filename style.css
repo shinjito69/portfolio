@@ -106,6 +106,7 @@ nav a:hover {
 .section {
     padding: 70px 0;
     border-top: 1px solid rgba(255,255,255,0.04);
+    text-align: center;
 }
 
 .section h2 {
@@ -117,6 +118,9 @@ nav a:hover {
 
 .section p {
     line-height: 1.6;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* CERTIFICATIONS */
@@ -166,7 +170,6 @@ nav a:hover {
 .stage-intro {
     max-width: 800px;
     margin: 0 auto 40px;
-    text-align: center;
 }
 
 .stage-step {
@@ -186,9 +189,15 @@ nav a:hover {
     color: #dcd6ff;
 }
 
+.stage-photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .stage-photo img {
     width: 100%;
-    max-width: 360px;
+    max-width: 320px;
     border-radius: 12px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.6);
     border: 1px solid rgba(255,255,255,0.08);
@@ -209,10 +218,6 @@ nav a:hover {
     align-items: center;
 }
 
-.projet-text p {
-    margin-bottom: 15px;
-}
-
 .projet-photo img {
     width: 100%;
     max-width: 450px;
@@ -223,17 +228,16 @@ nav a:hover {
     margin: 0 auto;
 }
 
-/* SYNTHÈSE FIX */
+/* SYNTHÈSE */
 #synthese .cta-center {
     text-align: center;
 }
 
 #synthese .cta-center .btn {
     display: inline-block;
-    max-width: 100%;
 }
 
-/* CONCLUSION FIX */
+/* CONCLUSION */
 .conclusion-grid {
     display: grid;
     grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
@@ -249,6 +253,11 @@ nav a:hover {
     border-radius: 12px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.6);
     border: 1px solid rgba(255,255,255,0.08);
+}
+
+/* CONTACT */
+#contact {
+    text-align: center;
 }
 
 /* RESPONSIVE */
@@ -267,33 +276,4 @@ nav a:hover {
     .conclusion-photo img {
         max-width: 350px;
     }
-}
-/* ALIGNEMENT GLOBAL CENTRÉ */
-.section {
-    text-align: center;
-}
-
-/* Les paragraphes centrés */
-.section p {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* Synthèse : bouton centré */
-#synthese .cta-center {
-    text-align: center;
-}
-
-/* Contact : centré aussi */
-#contact {
-    text-align: center;
-
-/* FIX IMAGES PROJET */
-.etape-card img {
-    width: 250px !important;
-    height: auto;
-    display: block;
-    margin: 10px auto;
-    border-radius: 10px;
 }
