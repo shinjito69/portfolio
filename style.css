@@ -166,22 +166,27 @@ nav a:hover {
     border: 1px solid rgba(255,255,255,0.08);
 }
 
-/* STAGE */
+/* STAGE (FIX COMPLET ALIGNEMENT) */
 .stage-intro {
     max-width: 800px;
     margin: 0 auto 40px;
 }
 
 .stage-step {
-    display: grid;
-    grid-template-columns: 1.2fr 1fr;
-    gap: 30px;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
+    gap: 40px;
     margin-bottom: 60px;
 }
 
 .stage-step.reverse {
-    grid-template-columns: 1fr 1.2fr;
+    flex-direction: row-reverse;
+}
+
+.stage-text {
+    flex: 1;
+    text-align: left;
 }
 
 .stage-text h3 {
@@ -190,9 +195,13 @@ nav a:hover {
 }
 
 .stage-photo {
+    flex: 1;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-end;
+}
+
+.stage-step.reverse .stage-photo {
+    justify-content: flex-start;
 }
 
 .stage-photo img {
@@ -267,13 +276,19 @@ nav a:hover {
     .stage-step.reverse,
     .projet-grid,
     .conclusion-grid {
-        grid-template-columns: 1fr;
+        flex-direction: column;
         text-align: center;
     }
 
-    .stage-photo img,
+    .stage-photo,
     .projet-photo img,
     .conclusion-photo img {
+        justify-content: center;
         max-width: 350px;
+        margin: 0 auto;
+    }
+
+    .stage-text {
+        text-align: center;
     }
 }
